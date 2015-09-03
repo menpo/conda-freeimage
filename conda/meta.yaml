@@ -8,7 +8,7 @@ source:
   sha256: fbfc65e39b3d4e2cb108c4ffa8c41fd02c07d4d436c594fff8dab1a6d5297f89
 
   patches:
-    - osx_makefile.patch
+    - osx_makefile.patch [osx]
 
 about:
   home: https://sourceforge.net/projects/freeimage
