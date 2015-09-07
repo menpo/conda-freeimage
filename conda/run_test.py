@@ -23,7 +23,7 @@ else:
 # Get paths to the lib
 libnames = []
 if not sys.platform.startswith('win'):
-    libnames.append(os.path.join(sys.prefix, libdir, fname_base + '-' + lib_version + ext))
+    libnames.append(os.path.join(sys.prefix, libdir, fname_base + '.' + lib_version + ext))
 libnames.append(os.path.join(sys.prefix, libdir, fname_base + ext))
 
 # Load library and get found version
