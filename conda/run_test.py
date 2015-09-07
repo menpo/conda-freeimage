@@ -12,10 +12,12 @@ if sys.platform.startswith('win'):
     ext = '.dll'
     loader = ctypes.windll.LoadLibrary
 elif sys.platform.startswith('darwin'):
+    sep = '.'
     libdir = 'lib'
     fname_base = 'libfreeimage'
     ext = '.dylib'
 else:
+    sep = '-'
     libdir = 'lib'
     fname_base = 'libfreeimage'
     ext = '.so'
@@ -23,7 +25,7 @@ else:
 # Get paths to the lib
 libnames = []
 if not sys.platform.startswith('win'):
-    libnames.append(os.path.join(sys.prefix, libdir, fname_base + '.' + lib_version + ext))
+    libnames.append(os.path.join(sys.prefix, libdir, fname_base + sep + lib_version + ext))
 libnames.append(os.path.join(sys.prefix, libdir, fname_base + ext))
 
 # Load library and get found version
