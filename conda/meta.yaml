@@ -9,6 +9,7 @@ source:
 
   patches:
     - osx_makefile.patch  # [osx]
+    - vs2010_omp.patch  # [win and py3k]
 
 about:
   home: https://sourceforge.net/projects/freeimage
